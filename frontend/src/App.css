@@ -1,38 +1,47 @@
-.App {
-  text-align: center;
+/* Center the container element */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* To center the container vertically */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Center the form element within the container */
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+h1 {
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+form {
+  margin-top: 30px;
+}
+
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form .form-control {
+  border-radius: 0;
+}
+
+form .btn {
+  background-color: #007bff;
   color: white;
+  border-radius: 0;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+form .btn:hover {
+  background-color: #0069d9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
