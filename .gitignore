@@ -6,7 +6,7 @@
 .pnp.js
 
 #removing a.out
-/server/a.out
+/a.out
 
 # testing
 /coverage
