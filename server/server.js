@@ -10,7 +10,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.post('/run-code', (req, res) => {
   const { code } = req.body;
-  execSh(`echo "${code}" > code.cpp && g++ code.cpp -o code.out && ./code.out`, function (err, stdout, stderr) {
+  execSh(`echo "${code}" > code.cpp && g++-12 code.cpp -o code.out && ./code.out`, function (err, stdout, stderr) {
     if (err) {
       res.status(500).send({ error: err });
     } else {
