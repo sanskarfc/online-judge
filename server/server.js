@@ -5,7 +5,7 @@ const run = async () => {
   let out;
 
   try {
-    out = await execShPromise('ls -a', true);
+    out = await execShPromise('g++-12 sample.cpp', true);
   } catch (e) {
     console.log('Error: ', e);
     console.log('Stderr: ', e.stderr);
