@@ -6,11 +6,25 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css'; //Example style, you can use another
 
 function App() {
-  const [code, setCode] = React.useState(
-    `function add(a, b) {\n  return a + b;\n}`
-  );
+  const [code,setCode] = useState('');
+  
+  const handleSubmit = async () => {
+      console.log(code);
+      try {
+          const response = await fetch('http://localhost:4000/run-code', {
+              method: 'POST',
+              body: JSON.stringify({ code: code }),
+              headers: { 'Content-Type': 'application/json' },
+          });
+          const result = await response.json();
+          console.log(result);
+      } catch (err) {
+          console.error(err);
+      }
+  };
+
   return (
-    <div className='editor-view'>
+    <div className='App'>
         <h1>Code Editor using React Code Editor</h1>
         <Editor
           value={code}
@@ -22,9 +36,9 @@ function App() {
             fontSize: 12,
           }}
         />
+       <button onClick={handleSubmit}>Run Code</button>
     </div>
   );
 }
 
 export default App;
-

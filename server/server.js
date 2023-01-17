@@ -1,19 +1,25 @@
-const execSh = require("exec-sh");
-const fs = require("fs");
+const express = require('express');
+const cors = require('cors');
+const execSh = require('exec-sh');
+const app = express();
+const bodyParser = require('body-parser');
 
-// read test cases from file
-const testCases = fs.readFileSync("testcase.txt", "utf8").trim().split("\n");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors({ origin: 'http://localhost:3000' }));
 
-console.log(testCases); // test cases
+app.post('/run-code', (req, res) => {
+  const { code } = req.body;
+  execSh(`echo "${code}" > code.cpp && g++ code.cpp -o code.out && ./code.out`, function (err, stdout, stderr) {
+    if (err) {
+      res.status(500).send({ error: err });
+    } else {
+      res.send({ output: stdout });
+    }
+  });
+});
 
-// iterate through test cases
-testCases.forEach((testCase) => {
-    // compile and run the C++ program with the test case as input
-    execSh(`g++-12 sample.cpp -o sample && echo ${testCase} | ./sample`, (error, stdout, stderr) => {
-        if (error) {
-            console.log(`error: ${error}`);
-        }
-        console.log(`stdout: ${stdout}`);
-    });
+app.listen(4000, () => {
+  console.log('Server running on port 4000');
 });
 
