@@ -1,20 +1,19 @@
-const execShPromise = require("exec-sh").promise;
+const execSh = require("exec-sh");
+const fs = require("fs");
 
-// run interactive bash shell -- here, i'm just trying out the execSh package
-const run = async () => {
-  let out;
+// read test cases from file
+const testCases = fs.readFileSync("testcase.txt", "utf8").trim().split("\n");
 
-  try {
-    out = await execShPromise('g++-12 -o sample sample.cpp && ./sample', true);
-  } catch (e) {
-    console.log('Error: ', e);
-    console.log('Stderr: ', e.stderr);
-    console.log('Stdout: ', e.stdout);
+console.log(testCases); // test cases
 
-    return e;
-  }
+// iterate through test cases
+testCases.forEach((testCase) => {
+    // compile and run the C++ program with the test case as input
+    execSh(`g++-12 sample.cpp -o sample && echo ${testCase} | ./sample`, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error}`);
+        }
+        console.log(`stdout: ${stdout}`);
+    });
+});
 
-  console.log('out: ', out.stdout, out.stderr);
-}
-
-run();
