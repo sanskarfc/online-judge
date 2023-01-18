@@ -18,8 +18,17 @@ form {
     margin: 10px;
 }
 
+.react-navbar {
+    margin-bottom: 25px;
+}
+
 .Code-Editor {
     border: solid;
+    margin-bottom: 25px;
+}
+
+.output-test {
+    margin-top: 25px;
 }
 
 
