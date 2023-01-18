@@ -9,7 +9,7 @@ function App() {
   const [code,setCode] = useState('');
   
   const handleSubmit = async () => {
-      console.log(code);
+      console.log(code); // for debugging 
       try {
           const response = await fetch('http://localhost:4000/run-code', {
               method: 'POST',
@@ -41,4 +41,10 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
+
+// to do: 
+// make better frontend (give border to code editor)
+// choosing language changes the syntax hihglighting 
+// there should we a navbar with home, account and history (history should contain the points and code from all the previous runs)
+// there should be a panel on botton of code editor which shows the results (instead of the server terminal)

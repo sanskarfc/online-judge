@@ -22,4 +22,8 @@ app.post('/run-code', (req, res) => {
 app.listen(4000, () => {
   console.log('Server running on port 4000');
 });
+ 
 
+// to do:
+// display the output from the compiled code in a window (GET request from the react frontend)
+// choosing languages should work (need to write different api routes) 
