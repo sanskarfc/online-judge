@@ -4,9 +4,13 @@ import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css'; //Example style, you can use another
+import './App.css';
+import { Navbar, Nav } from 'react-bootstrap';
 
-function App() {
+
+export default function App() {
   const [code,setCode] = useState('');
+  const [output,setOutput] = useState('');
   
   const handleSubmit = async () => {
       console.log(code); // for debugging 
@@ -17,31 +21,48 @@ function App() {
               headers: { 'Content-Type': 'application/json' },
           });
           const result = await response.json();
-          console.log(result);
       } catch (err) {
           console.error(err);
       }
   };
 
-  return (
-    <div className='App'>
-        <h1>Code Editor using React Code Editor</h1>
-        <Editor
-          value={code}
-          onValueChange={code => setCode(code)}
-          highlight={code => highlight(code, languages.js)}
-          padding={10}
-          style={{
-            fontFamily: '"Fira code", "Fira Mono", monospace',
-            fontSize: 12,
-          }}
-        />
-       <button onClick={handleSubmit}>Run Code</button>
-    </div>
-  );
+    return (
+        <div className='App'>
+            <div className="react-navbar">
+                <Navbar bg="light" expand="lg">
+                    <Navbar.Brand href="#">My App</Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto">
+                            <Nav.Link href="#home">Online Judge</Nav.Link>
+                            <Nav.Link href="#about">History</Nav.Link>
+                            <Nav.Link href="#contact">Problem Statement</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
+            </div>
+            <h1>Code Editor 👇</h1>
+            <div className="Code-Editor">
+                <Editor
+                    value={code}
+                    onValueChange={code => setCode(code)}
+                    highlight={code => highlight(code, languages.js)}
+                    padding={10}
+                    style={{
+                        fontFamily: '"Fira code", "Fira Mono", monospace',
+                            fontSize: 12,
+                    }}
+                />
+            </div> 
+            <button onClick={handleSubmit}>Run Code</button>
+            <div className="output-test">
+                <h2>Output: </h2> 
+            </div>
+        </div>
+    );
 }
 
-export default App; 
+
 
 // to do: 
 // make better frontend (give border to code editor)
