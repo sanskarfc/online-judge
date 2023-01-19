@@ -8,16 +8,24 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({ origin: 'http://localhost:3000' }));
 
+let outputData = '';
+
 app.post('/run-code', (req, res) => {
   const { code } = req.body;
   execSh(`echo "${code}" > code.cpp && g++-12 code.cpp -o code.out && ./code.out`, function (err, stdout, stderr) {
     if (err) {
-      res.status(500).send({ error: err });
+        console.log(err);
+        // return an error response if there was an error executing the code 
+        return res.status(500).json({ err });
     } else {
-      res.send({ output: stdout });
+        console.log("stdout: ", stdout);
+        console.log("stderr: ", stderr);
+        // return the stdout in the response
+        return res.json({ output:stdout });
     }
   });
 });
+
 
 app.listen(4000, () => {
   console.log('Server running on port 4000');
