@@ -8,7 +8,7 @@ import 'prismjs/themes/prism.css'; //Example style, you can use another
 
 
 export default function Editor_component() {
-  const [code,setCode] = useState('');
+  const [code,setCode] = useState('// write your c++ code here :]\n \n#include<bits/stdc++.h> \n \nusing namespace std;\n \nint main() {\n \n \treturn 0; \n}');
   const [output,setOutput] = useState('');
   
   const handleSubmit = async () => {
