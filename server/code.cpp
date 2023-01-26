@@ -1,8 +1,10 @@
-#include <bits/stdc++.h>
-
+// write your c++ code here :]
+ 
+#include<bits/stdc++.h> 
+ 
 using namespace std;
-
-int main () {
-  cout << 69 << endl;
-  return 0;
+ 
+int main() {
+cout << 6999 << endl;
+ 	return 0; 
 }
