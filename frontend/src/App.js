@@ -19,6 +19,7 @@ function App() {
             <main className="py-1">
                 <Routes>
                     <Route path="/" element={<Home/>} />
+                    <Route path="/home" element={<Home/>} />
                     <Route path="/doubts" element={<Doubts/>} /> 
                     <Route path="/history" element={<History/>} /> 
                     <Route path="/problem" element={<Problem/>} /> 
