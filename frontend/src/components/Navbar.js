@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 
-function App() {
+export default function Navnav() {
     return (
         <Navbar bg="light" expand="lg">
             <Navbar.Brand href="#">My App</Navbar.Brand>
