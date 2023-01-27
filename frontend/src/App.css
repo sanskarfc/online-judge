@@ -29,6 +29,18 @@ form {
 
 .output-test {
     margin-top: 25px;
+} 
+
+.doubt-heading {
+   text-align: center;  
+   background: maroon;
+   color: white;
+} 
+
+.history-heading {
+    text-align: center;
+    background: maroon;
+    color: white;
 }
 
 

@@ -1,5 +1,11 @@
+import "../App.css";
+
 const History = () => {
-    return <h1>History</h1>
+    return (
+        <div className="history-page">
+            <h1 className="history-heading">Submission History</h1>
+        </div>
+    )
 };
 
 export default History;
