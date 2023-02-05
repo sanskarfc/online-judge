@@ -10,6 +10,7 @@ const dbConfig = require('./config/db.config.js');
 const mongoose = require('mongoose'); 
 
 const UserRoute = require('./routes/User')
+const QuestionRoute = require('./routes/Question')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,6 +18,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 
 // router for api
 app.use('/user', UserRoute); 
+app.use('/question', QuestionRoute);
 
 mongoose.Promise = global.Promise;
 

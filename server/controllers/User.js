@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // create and save a new user
 exports.create = async(req, res) => { 
     if(!req.body.user_id && !req.body.user_name){ // cannot create the entity because name or user_id is empty
-        res.status(400).send({messaage: "content cannot be empty"});
+        res.status(400).send({messaage: "user_name and user_id cannot be empty"});
     }
 
     const user = new UserModel({  // creating model 

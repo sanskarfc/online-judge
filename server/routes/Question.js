@@ -8,12 +8,12 @@ app.use(bodyParser.urlencoded({extended: false}))
 // parse application/json
 app.use(bodyParser.json());
 
-const UserControllers = require('../controllers/User')
+const QuestionControllers = require('../controllers/Question')
 const router = express.Router();
 
-router.get('/', UserControllers.findAll);
-router.get('/:id', UserControllers.findOne);
-router.post('/', UserControllers.create);
-router.delete('/:id', UserControllers.destroy);
+router.get('/', QuestionControllers.findAll);
+router.get('/:id', QuestionControllers.findOne);
+router.post('/', QuestionControllers.create);
+router.delete('/:id', QuestionControllers.destroy);
 
 module.exports = router

@@ -9,16 +9,20 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
-    user_id: {
+const questionSchema = new mongoose.Schema({
+    question_id: {
         type: String,
         required: true
     },
-    user_name: {
+    question_content: {
+        type: String,
+        required: true
+    },
+    question_author: {
         type: String,
         required: true
     }
 });
 
-const User = mongoose.model('User', userSchema); 
-module.exports = mongoose.model('User', userSchema); 
+const Question = mongoose.model('Question', questionSchema);
+module.exports = mongoose.model('Question', questionSchema);
