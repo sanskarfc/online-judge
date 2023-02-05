@@ -9,7 +9,7 @@
 a.out
 
 #removing mongo config
-/server/config/db.config.js
+db.config.js
 
 # testing
 /coverage
