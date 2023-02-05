@@ -8,6 +8,9 @@
 #removing a.out
 a.out
 
+#removing mongo config
+db.config.js
+
 # testing
 /coverage
 
