@@ -11,7 +11,50 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}   
+
+.heading {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.doubts-on-screen {
+    padding-top: 20px;
+}  
+
+.list-heading {
+    text-align: center;
 } 
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+} 
+
+.Code-Editor{
+    background: #FFFDD0;
+}
+
+.Editor_comp {
+    padding-left: 50px; 
+    padding-right: 50px;
+}
+
+.output-test {
+    font-weight: bold;
+}
+
+.Editor_component {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
 
 .App {
     padding: 10px;
@@ -41,7 +84,11 @@ form {
     text-align: center;
     background: maroon;
     color: white;
-} 
+}  
+
+.clear-button {
+    margin: 3%;
+}
 
 .question-box {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -52,6 +99,7 @@ form {
   background-color: white;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .question-content {

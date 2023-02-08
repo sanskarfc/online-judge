@@ -2,7 +2,6 @@ const QuestionModel = require('../models/Question')
 
 const express = require('express');
 var bodyParser = require('body-parser');
-const Question = require('../models/Question');
 const app = express(); 
 
 // parse application/x-www-form-urlencoded
@@ -73,4 +72,6 @@ exports.destroy = async (req, res) => {
             message: err.message
         });
     });
-};
+}; 
+
+

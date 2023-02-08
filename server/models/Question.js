@@ -21,7 +21,11 @@ const questionSchema = new mongoose.Schema({
     question_author: {
         type: String,
         required: true
-    }
+    },
+    comments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment"
+    }]
 });
 
 const Question = mongoose.model('Question', questionSchema);

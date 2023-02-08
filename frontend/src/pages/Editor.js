@@ -41,7 +41,7 @@ export default function Editor_component() {
 
     return (
         <div className="Editor_comp">
-            <h1>Code Editor 👇</h1>
+            <h1 className="heading">Code Editor 👇</h1>
             <div className="Code-Editor">
                 <Editor
                     value={code}

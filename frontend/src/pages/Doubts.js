@@ -28,40 +28,46 @@ export default function Doubts() {
             console.log("Question added successfully !!");
         } else {
             console.log("Error adding question !!");
-        }
+        } 
+        
+        // setting the input fields to empty
         setQuestionId("");
         setQuestionAuthor("");
-        setQuestionContent("");
-    };
+        setQuestionContent(""); 
+
+    }; 
 
     return (
         <div className="doubts-page">
             <Navnav />            
             <h1 className="doubt-heading">Ask Your Doubts Here!</h1>    
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder='Question ID'
-                    value={questionId}
-                    onChange={(e) => setQuestionId(e.target.value)}
-                />
-                <input
-                    type="text"
-                    placeholder='Question Content'
-                    value={questionContent}
-                    onChange={(e) => setQuestionContent(e.target.value)}
-                /> 
-                <input 
-                    type="text"
-                    placeholder='Question Author'
-                    value={questionAuthor}
-                    onChange={(e) => setQuestionAuthor(e.target.value)}
-                /> 
-                <button type="submit">Add Question</button>
-            </form> 
+            <div className="input-doubt">
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        placeholder='Question ID'
+                        value={questionId}
+                        onChange={(e) => setQuestionId(e.target.value)}
+                    />
+                  <input
+                        type="text"
+                        placeholder='Question Content'
+                        value={questionContent}
+                        onChange={(e) => setQuestionContent(e.target.value)}
+                    /> 
+                    <input 
+                        type="text"
+                        placeholder='Question Author'
+                        value={questionAuthor}
+                        onChange={(e) => setQuestionAuthor(e.target.value)}
+                    /> 
+                    <button type="submit">Add Question</button>
+
+                </form>  
+            </div> 
             <AllQuestions />
             {/* Sanskar Working on this rn */}
-            {/* Make a doubts page where people can create a doubt */} 
+            {/* Make a doubts page where people can create a doubt --> done */}
             {/* Adding comments should also be possible --> something like reddit but threads are not needed */} 
         </div> 
     )
