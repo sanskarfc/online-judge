@@ -18,4 +18,9 @@ history page:
 todo: 
 - ~print the shell output on the main frontend screen beside the code editor~
 - make this beautiful
-- make the problem statement(ability to add a problem statement as a markdown file) and doubts pages (have people ask doubt and people can comment here)
+- make the problem statement(ability to add a problem statement as a markdown file) and doubts pages (have people ask doubt and people can comment here) 
+
+handling submissions at the same time: 
+- rate limiting (user experience is bad - might be unfair) --> last option
+- message queue (adding event to message queue {user_ID, code, submission_ID}) --> async processing 
+- need to avoid malicious/illegal code

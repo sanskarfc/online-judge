@@ -69,6 +69,5 @@ export default function Doubts() {
             {/* Sanskar Working on this rn */}
             {/* Make a doubts page where people can create a doubt --> done */}
             {/* Adding comments should also be possible --> something like reddit but threads are not needed */} 
-        </div> 
-    )
+        </div>     )
 }
