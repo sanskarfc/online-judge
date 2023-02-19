@@ -1,4 +1,4 @@
-# The Veridactor
+# The Veridactor - Simple Online Judge System
 
 this is an attempt at making an online judge for iit gandhinagar's flagship hackathon "hackrush"
 
