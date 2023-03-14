@@ -1,0 +1,181 @@
+/* Center the container element */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* To center the container vertically */
+}
+
+/* Center the form element within the container */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}   
+
+.heading {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.doubts-on-screen {
+    padding-top: 20px;
+}  
+
+.submissions-on-screen {
+  padding-top: 20px;
+}  
+
+.list-heading {
+    text-align: center;
+} 
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+} 
+
+.Code-Editor{
+    background: #FFFDD0;
+}
+
+.Editor_comp {
+    padding-left: 50px; 
+    padding-right: 50px;
+}
+
+.output-test {
+    font-weight: bold;
+}
+
+.Editor_component {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.App {
+    padding: 10px;
+    margin: 10px;
+}
+
+.react-navbar {
+    margin-bottom: 25px;
+}
+
+.Code-Editor {
+    border: solid;
+    margin-bottom: 25px;
+} 
+
+.output-test {
+    margin-top: 25px;
+} 
+
+.doubt-heading {
+   text-align: center;  
+   background: maroon;
+   color: white;
+} 
+
+.submissions-heading {
+  text-align: center;  
+  background: maroon;
+  color: white;
+} 
+
+.history-heading {
+    text-align: center;
+    background: maroon;
+    color: white;
+}  
+
+.clear-button {
+    margin: 3%;
+}
+
+.question-box {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.submissions-page {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.question-content {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submission-code {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.question-author {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.submission-score {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+h1 {
+  margin-bottom: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+form {
+  margin-top: 30px;
+}
+
+form .form-group {
+  margin-bottom: 15px;
+}
+
+form .form-control {
+  border-radius: 0;
+}
+
+form .btn {
+  background-color: #007bff;
+  color: white;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+form .btn:hover {
+  background-color: #0069d9;
+}
+
