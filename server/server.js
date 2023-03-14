@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'scores')));
 // running code in terminal 
 app.post('/run-code', (req, res) => {
   const { code } = req.body;
-    execSh(`echo "${code}" > code.cpp && g++-12 code.cpp -o code.out && ./code.out > output.txt`, function (err, stdout, stderr) {
+    execSh(`echo "${code}" > code.cpp && g++ code.cpp -o code.out && ./code.out > output.txt`, function (err, stdout, stderr) {
         if (err) {
             console.log(err); 
             // return an error response if there was an error executing the code 

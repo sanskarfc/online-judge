@@ -6,11 +6,13 @@ import 'prismjs/components/prism-c';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/themes/prism.css'; //Example style, you can use another
 import { set } from 'mongoose';
+import { v4 as uuidv4 } from 'uuid'; 
 
 export default function Editor_component() {
   const [code,setCode] = useState('// write your c++ code here :]\n \n#include<bits/stdc++.h> \n \nusing namespace std;\n \nint main() {\n \n \treturn 0; \n}');
   const [output,setOutput] = useState('');
-  const [submission_id,setSubmission_id] = useState(0); 
+
+  const submission_id = uuidv4(); 
    
   const handleSubmit = async () => {
       console.log(code); // for debugging 
@@ -39,16 +41,16 @@ export default function Editor_component() {
        } catch(err) {
            console.log(err);
        }
-
-       setSubmission_id(submission_id + 1); 
     
        // send post request to submissions page with code and score
        try {
-              const response = await fetch('http://localhost:4000/submissions', {
+              const response = await fetch('http://localhost:4000/submissions', {  
                 method: 'POST',
-                body: JSON.stringify({ id: submission_id, code: code, score: output }), 
+                body: JSON.stringify({ submission_id: submission_id, submission_code: code, submission_score: output }), 
                 headers: { 'Content-Type': 'application/json' }, 
               });
+              console.log(submission_id); 
+              
               if (!response.ok) {
                  throw new Error(response.statusText);
               }

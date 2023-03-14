@@ -11,7 +11,7 @@ export default function Navnav() {
                     <Nav.Link href="/home">Home</Nav.Link>
                     <Nav.Link href="/problem">Problem</Nav.Link>
                     <Nav.Link href="/doubts">Forum</Nav.Link>
-                    <Nav.Link href="/profile">Submissions</Nav.Link>
+                    <Nav.Link href="/submission">Submissions</Nav.Link>
                     <Nav.Link href="/leaderboard">Leaderboard</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

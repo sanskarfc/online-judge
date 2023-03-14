@@ -25,7 +25,7 @@ function App() {
                     <Route path="/doubts" element={<Doubts/>} /> 
                     <Route path="/history" element={<History/>} /> 
                     <Route path="/problem" element={<Problem/>} /> 
-                    <Route path="/profile" element={<Submissions/>} />
+                    <Route path="/submission" element={<Submissions/>} />
                     <Route path="/leaderboard" element={<Leaderboard/>} />
                 </Routes>
             </main>

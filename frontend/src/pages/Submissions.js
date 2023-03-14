@@ -9,6 +9,7 @@ export default function Submissions() {
         fetch("http://localhost:4000/submissions")
         .then((res) => res.json())
         .then((data) => {
+            data.sort((a, b) => a._id - b._id);
             setSubmissions(data); 
         });
     }, []);
@@ -20,7 +21,7 @@ export default function Submissions() {
             <h1>Submissions</h1>
             {submissions.map((submission) => (
             <div className="submission" key={submission._id}>
-                <h3>{submission.submission_id}</h3>
+                <h3>{submission.submission_id}</h3> 
                 <p>{submission.submission_code}</p>
                 <p>{submission.submission_score}</p>
             </div>
