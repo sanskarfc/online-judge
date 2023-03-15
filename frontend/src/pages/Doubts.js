@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import "../App.css";
 import Navnav from "../components/Navbar";
 import AllQuestions from "../components/display_doubts";
- 
-{/*make a page to add question*/}
 
 export default function Doubts() {
     const [questionId, setQuestionId] = useState("");
@@ -11,7 +9,7 @@ export default function Doubts() {
     const [questionAuthor, setQuestionAuthor] = useState("");
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault(); 
         const response = await fetch("http://localhost:4000/question", {
             method: "POST",
             headers: {
@@ -36,10 +34,9 @@ export default function Doubts() {
         setQuestionContent(""); 
 
     }; 
-
-    return (
+    return ( 
         <div className="doubts-page">
-            <Navnav />            
+            <Navnav />           
             <h1 className="doubt-heading">Ask Your Doubts Here!</h1>    
             <div className="input-doubt">
                 <form onSubmit={handleSubmit}>
@@ -69,5 +66,6 @@ export default function Doubts() {
             {/* Sanskar Working on this rn */}
             {/* Make a doubts page where people can create a doubt --> done */}
             {/* Adding comments should also be possible --> something like reddit but threads are not needed */} 
-        </div>     )
+        </div> 
+    )
 }

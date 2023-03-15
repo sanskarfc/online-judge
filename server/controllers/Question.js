@@ -15,7 +15,7 @@ exports.create = async(req, res) => {
     console.log("inside question create POST req")
     if(!req.body.question_id && !req.body.question_content){
         res.status(400).send({message: "content of the question should not be empty"});
-    }
+    } 
 
     const question = new QuestionModel({
         question_id: req.body.question_id,
@@ -61,7 +61,7 @@ exports.destroy = async (req, res) => {
         if (!data){
             res.status(404).send({
                 message: "question not found"
-            });
+            }); 
         } else {
             res.send({
                 message: "question deleted successfully !!"

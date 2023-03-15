@@ -5,12 +5,14 @@ const execSh = require('exec-sh');
 const app = express();
 const bodyParser = require('body-parser');
 const fs = require('fs'); 
+const path = require('path');
 
 const dbConfig = require('./config/db.config.js');
 const mongoose = require('mongoose'); 
 
 const UserRoute = require('./routes/User')
 const QuestionRoute = require('./routes/Question')
+const SubmissionsRoute = require('./routes/Submissions')
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,6 +21,7 @@ app.use(cors({ origin: 'http://localhost:3000' }));
 // router for api
 app.use('/user', UserRoute); 
 app.use('/question', QuestionRoute);
+app.use('/submissions', SubmissionsRoute);
 
 mongoose.Promise = global.Promise;
 
@@ -29,6 +32,9 @@ mongoose.connect(dbConfig.url, {
 }).catch(err => {
     console.log("could not connect to the database!!", err);
 });
+
+app.use(express.static(path.join(__dirname, 'codes')));
+app.use(express.static(path.join(__dirname, 'scores')));
  
 
 // running code in terminal 
@@ -45,6 +51,8 @@ app.post('/run-code', (req, res) => {
         }
     });
 }); 
+
+// send request to submissions page 
 
 // displaying the output 
 app.get('/output', (req, res) => {

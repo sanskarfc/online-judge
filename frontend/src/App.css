@@ -22,6 +22,10 @@ form {
     padding-top: 20px;
 }  
 
+.submissions-on-screen {
+  padding-top: 20px;
+}  
+
 .list-heading {
     text-align: center;
 } 
@@ -80,6 +84,12 @@ form {
    color: white;
 } 
 
+.submissions-heading {
+  text-align: center;  
+  background: maroon;
+  color: white;
+} 
+
 .history-heading {
     text-align: center;
     background: maroon;
@@ -102,7 +112,24 @@ form {
   margin: 0 auto;
 }
 
+.submissions-page {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .question-content {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.submission-code {
   font-size: 16px;
   margin-top: 10px;
 }
@@ -112,6 +139,12 @@ form {
   font-weight: bold;
   margin-bottom: 10px;
   text-align: center;
+}
+
+.submission-score {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 

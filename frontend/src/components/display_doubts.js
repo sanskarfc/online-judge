@@ -15,6 +15,7 @@ const AllQuestions = () => {
 
   return (
     <div className="doubts-on-screen">
+        <button className="clear-button" onSubmit={() => {setQuestions([])}}>Clear Questions</button>
         <h3 className="list-heading">New Doubts Below</h3>
           {questions.map((question) => (
             <div key={question.question_id} className="listing">

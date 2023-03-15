@@ -16,12 +16,24 @@
     "react-syntax-highlighter": "^15.5.0",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+<<<<<<< HEAD
+=======
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
   "eslintConfig": {
     "extends": [
       "react-app",

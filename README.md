@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 # The Veridactor - Simple Online Judge System
 
+=======
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
 this is an attempt at making an online judge for iit gandhinagar's flagship hackathon "hackrush"
 
 tech stack:<br>
@@ -7,22 +10,34 @@ frontend: reactjs <br>
 backend: node <br>
 database: mongodb <br>
 
+<<<<<<< HEAD
 doubts page: 
+=======
+doubts page (sanskar) : 
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
 - ~post schema (post_id (primary_key), user_id, post_time)~
 - comment schema (comment_id (primary_key), user_id, post_id) 
 - ~will display all the posts sorted by time (earlier first)~
 - when clicked on "show comments" for a post, all the comments with post_id of that post should be shown 
 
+<<<<<<< HEAD
 history page:
+=======
+history page (saatvik) :
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
 - submission schema (submission_id, user_id, code, score, submission_time)
 - for a particular user, list down all the submissions 
 
 todo: 
 - ~print the shell output on the main frontend screen beside the code editor~
 - make this beautiful
+<<<<<<< HEAD
 - make the problem statement(ability to add a problem statement as a markdown file) and doubts pages (have people ask doubt and people can comment here) 
 
 handling submissions at the same time: 
 - rate limiting (user experience is bad - might be unfair) --> last option
 - message queue (adding event to message queue {user_ID, code, submission_ID}) --> async processing 
 - need to avoid malicious/illegal code
+=======
+- make the problem statement(ability to add a problem statement as a markdown file) and doubts pages (have people ask doubt and people can comment here)
+>>>>>>> 1377d9febbcf66f2a153b1cfc0f58c526fbeb1b1
